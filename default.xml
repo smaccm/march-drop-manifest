@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+     Copyright 2014, NICTA
+
+     This software may be distributed and modified according to the terms of
+     the BSD 2-Clause license. Note that NO WARRANTY is provided.
+     See "LICENSE_BSD2.txt" for details.
+
+     @TAG(NICTA_BSD)
+  -->
+
+<manifest>
+    <!-- default revision for each project, and name of the remote -->
+    <default revision="master"
+        remote="SMACCMpub"
+    />
+    <remote name="seL4pub" fetch="https://github.com/seL4"/>
+    <remote name="SMACCMpub" fetch="https://github.com/smaccm"/>
+
+
+    <!-- list of 'projects' (i.e repositories), path is relative to the path in remote above -->
+    <project remote="seL4pub" name="capdl-loader-app.git" path="apps/capdl-loader-experimental"/>
+
+    <project remote="SMACCMpub" name="seL4.git" path="kernel" revision="arm_hyp" />
+
+    <project remote="seL4pub" name="elfloader-tool.git" path="tools/elfloader"/>
+    <project remote="seL4pub" name="common-tool.git" path="tools/common"/>
+    <project remote="seL4pub" name="kbuild-tool.git" path="tools/kbuild"/>
+    <project remote="seL4pub" name="capDL-tool.git" path="tools/capDL"/>
+    <project remote="seL4pub" name="python-capdl-tool.git" path="tools/python-capdl"/>
+    <project remote="seL4pub" name="camkes-tool.git" path="tools/camkes"/>
+
+    <project remote="seL4pub" name="musllibc.git" path="libs/libmuslc" revision="sel4"/>
+    <project remote="seL4pub" name="libsel4muslcsys.git" path="libs/libsel4muslcsys" revision="master"/>
+    <project remote="seL4pub" name="libsel4muslcsys.git" path="libs/libsel4muslccamkes" revision="camkes"/>
+    <project remote="seL4pub" name="libsel4platsupport.git" path="libs/libsel4platsupport"/>
+    <project remote="seL4pub" name="libplatsupport.git" path="libs/libplatsupport"/>
+    <project remote="seL4pub" name="libcpio.git" path="libs/libcpio"/>
+    <project remote="seL4pub" name="libelf.git" path="libs/libelf"/>
+    <project remote="seL4pub" name="libsel4utils.git" path="libs/libsel4utils"/>
+    <project remote="seL4pub" name="libsel4sync.git" path="libs/libsel4sync"/>
+    <project remote="seL4pub" name="libsel4vspace.git" path="libs/libsel4vspace"/>
+    <project remote="seL4pub" name="libsel4vka.git" path="libs/libsel4vka"/>
+    <project remote="seL4pub" name="libsel4debug.git" path="libs/libsel4debug"/>
+    <project remote="seL4pub" name="libutils.git" path="libs/libutils"/>
+    <project remote="seL4pub" name="libsel4simple.git" path="libs/libsel4simple"/>
+    <project remote="seL4pub" name="libsel4simple-default.git" path="libs/libsel4simple-default"/>
+    <project remote="seL4pub" name="libsel4bench.git" path="libs/libsel4bench"/>
+
+    <project remote="seL4pub" name="libsel4allocman.git" path="libs/libsel4allocman"/>
+    <project remote="SMACCMpub" name="libsel4dma.git" path="libs/libsel4dma"/>
+    <project remote="SMACCMpub" name="libsel4arm-vmm.git" path="libs/libsel4arm-vmm"/>
+    <project remote="SMACCMpub" name="libusbdrivers.git" path="libs/libusbdrivers"/>
+
+    <project remote="SMACCMpub" name="march-drop.git" path="projects/march-drop">
+        <!-- symlinks to make the project structure fit the build system -->
+        <linkfile src="Makefile" dest="Makefile"/>
+        <linkfile src="Kbuild" dest="Kbuild"/>
+        <linkfile src="Kconfig" dest="Kconfig"/>
+        <linkfile src="configs" dest="configs"/>
+        <linkfile src="../../tools/camkes/docs/index.md" dest="README.md"/>
+        <linkfile src="../../kernel/libsel4" dest="libs/libsel4"/>
+        <linkfile src="../../tools/camkes/libsel4camkes" dest="libs/libsel4camkes"/>
+        <linkfile src="apps/vm" dest="apps/vm"/>
+        <linkfile src="apps/ping_pong" dest="apps/ping_pong"/>
+    </project>
+
+
+</manifest>
+
