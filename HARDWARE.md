@@ -1,13 +1,13 @@
 # CAmkES and seL4 on Odroid-XU Hardware
 
-In order to run on hardware you will need an Odroid-XU from [hardkernel](http://www.hardkernel.com/).  You will need a appropriate serial to USB cable ([for example | http://www.hardkernel.com/main/products/prdt_info.php?g_code=G134111883934]) *and* a micro-USB cable to connect the Odroid-XU to your host computer.  
+In order to run on hardware you will need an Odroid-XU from [hardkernel](http://www.hardkernel.com/).  You will need a appropriate serial to USB cable ([for example](http://www.hardkernel.com/main/products/prdt_info.php?g_code=G134111883934)) *and* a micro-USB cable to connect the Odroid-XU to your host computer.  
 
 ## Prerequisites
 
 <a name="hostsoftware"></a>
 ### Host Software
 
-#### Install `minicom`, `fastboot`. and `u-boot-tools`:
+#### Install `minicom`, `fastboot`, and `u-boot-tools`:
 
 	sudo apt-get install minicom android-tools-fastboot u-boot-tools
 
@@ -45,7 +45,7 @@ Connect a UART cable to the Odroid-XU's UART port (Serial console (debug) in the
 
 Connect a micro-USB cable to the Odroid-XU's USB port (USB 3.0 OTG in the picture below) and the host computer.
 
-!(http://www.cnx-software.com/wp-content/uploads/2013/08/ODROID-XU.jpg)
+![Odroid-XU picture](http://www.cnx-software.com/wp-content/uploads/2013/08/ODROID-XU.jpg)
 
 Start minicom on host in a separate window:
 
@@ -95,7 +95,7 @@ Get the image off dropbox (https://www.dropbox.com/s/hkduec0ezi7i2ux/smaccm_demo
 
 ### Install on SD
 
-Insert the SD into the host machine. Note which device it is, for example `dev/sdb` (use `dmesg` to help). then do:
+Insert the SD into the host machine. Note which device it is, for example `dev/sdb` (use `dmesg` to help). Then do:
        
        gunzip -c smaccm_demo.img.gz | dd of=<SD device file>; sync
 
@@ -107,8 +107,7 @@ Plug the SD card into the Odroid-XU.
 
 #### Configure Linux in VM to load root file-system from SD
 
-Note that by default Linux in the VM will try to use the SD card as the root file-system.  
-If you've changed this and need to set it back, then set the appropriate configuration option `CONFIG_VM_ROOTFS_MMCBLK1P2` using either `make menuconfig` or in the `.config` file or `vm_defconfig` file.
+Note that by default Linux in the VM will try to use the SD card as the root file-system.  If you've changed this and need to set it back, then set the appropriate configuration option `CONFIG_VM_ROOTFS_MMCBLK1P2` using either `make menuconfig` or in the `.config` file or `vm_defconfig` file.
 
 ### Install on eMMC
 
@@ -116,7 +115,7 @@ Installing to eMMC is similar to SD. You use an eMMC to SD adaptor and plug that
 
 #### Configure Linux in VM to load root file-system from eMMC
 
-Note that by default Linux in the VM will try to use the SD card as the root file-system.  To use the eMMC set the appropriate configuration option `CONFIG_VM_ROOTFS_MMCBLK0P2` using either `make menuconfig` or in the `.config` or `vm_defconfig` file file.
+Note that by default Linux in the VM will try to use the SD card as the root file-system.  To use the eMMC set the appropriate configuration option `CONFIG_VM_ROOTFS_MMCBLK0P2` using either `make menuconfig` or in the `.config` or `vm_defconfig` file.
 
 
 

@@ -10,7 +10,7 @@ First of all we assume that you are running Linux.  We typically use some flavou
 
 ### Docker
 
-If you use Docker we have support for using a Docker image to build seL4 and CAmkES that is preconfigured with all the tools needed to download and build the code.  However, the Docker image is not set up to connect to the Odroid-XU (see `HARDWARE.md` for details of how to do this).
+If you use Docker we have support for using a Docker image to build seL4 and CAmkES that is preconfigured with all the tools needed to download and build the code.  However, the Docker image is not set up to connect to the Odroid-XU (see [`HARDWARE.md`](https://github.com/smaccm/march-drop-manifest/blob/master/HARDWARE.md) for details of how to do this).
 
 ## Toolchains
 
@@ -62,7 +62,7 @@ In order to support 32-bit binaries on 64-bit Linux do:
 	
 	sudo apt-get install realpath libxml2-utils 
 
-### Install minicom, fastboot. and u-boot-tools for accessing and loading on hardware:
+### Install minicom, fastboot, and u-boot-tools for accessing and loading on hardware:
 
 	sudo apt-get install minicom android-tools-fastboot u-boot-tools
 
