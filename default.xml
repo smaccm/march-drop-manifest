@@ -59,7 +59,10 @@
         <linkfile src="Kbuild" dest="Kbuild"/>
         <linkfile src="Kconfig" dest="Kconfig"/>
         <linkfile src="configs" dest="configs"/>
-        <linkfile src="../../tools/camkes/docs/index.md" dest="README.md"/>
+        <linkfile src="../../.repo/manifests/README.md" dest="README.md"/>
+        <linkfile src="../../.repo/manifests/PREREQS.md" dest="PREREQS.md"/>
+        <linkfile src="../../.repo/manifests/HARDWARE.md" dest="HARDWARE.md"/>
+        <linkfile src="../../tools/camkes/docs/index.md" dest="README-CAmkES.md"/>
         <linkfile src="../../kernel/libsel4" dest="libs/libsel4"/>
         <linkfile src="../../tools/camkes/libsel4camkes" dest="libs/libsel4camkes"/>
         <linkfile src="apps/vm" dest="apps/vm"/>
