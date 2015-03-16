@@ -9,12 +9,12 @@ The Quadcopter Mission Board drop contains the following scenario:
  * An instance of virtualised Linux running. Linux has access to all USB devices and the eMMC/SD storage.  Its console output is redirected to the seL4 debug serial port.  Linux can be logged into through the console, or over the network (using either the Odroid-XU's Ethernet or a Wifi adapter plugged into a USB port). 
  * A set of CAmkES/seL4 components implementing a simple ping-pong scenario.  These components are generated from an AADL system description and user-provided C code.
  * Native seL4 device drivers.
-   * USB: optionally used by the Linux VM
-   * PWM, timer: used by the ping-pong example
+   * USB: optionally used by the Linux VM, built into the hypervisor.
+   * timer: pwm timer used by the ping-pong example, built into the dispatcher component.
  * The ping-pong components run isolated from the Linux VM
  * Depending on a configuration option (`CONFIG_VM_USB`) the VM's USB access is either passthrough or goes through the native seL4 USB driver. By default passthrough is used for USB.
  * The eMMC/SD access always uses passthrough.  
- * When any of USB or eMMC are accessed using passthrough then Linux has access tot he DAM controller, which opens up a big security hole. The native USB driver helps to close this hole by avoiding USB passthrough, and a native eMMC controller will be developed to close this hole in the future.
+ * When any of USB or eMMC are accessed using passthrough then Linux has access to the DMA controller, which opens up a big security hole. The native USB driver helps to close this hole by avoiding USB passthrough, and a native eMMC controller will be developed to completely close this hole in the future.
 
 ## Prerequisites
 
@@ -91,14 +91,6 @@ Configure the network address on the Odroid-XU (via the console):
 `ssh` to the Odroid-XU and login:
 
       	ssh 192.168.0.10
-
-### Wifi connecting to an Access Point
-
-Plug a compatible Wifi adapter (see `HARDWARE.md`) into a USB port on the Odroid-XU.  Configure Wifi (via the console) ...
-
-### Wifi in AdHoc mode
-
-Plug a compatible Wifi adapter (see `HARDWARE.md`) into a USB port on the Odroid-XU.  Configure Wifi (via the console) ...
 
 ## Camera
 

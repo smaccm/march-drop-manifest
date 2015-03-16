@@ -10,7 +10,9 @@ First of all we assume that you are running Linux.  We typically use some flavou
 
 ### Docker
 
-If you use Docker we have support for using a Docker image to build seL4 and CAmkES that is preconfigured with all the tools needed to download and build the code.  However, the Docker image is not set up to connect to the Odroid-XU (see [`HARDWARE.md`](https://github.com/smaccm/march-drop-manifest/blob/master/HARDWARE.md) for details of how to do this).
+If you use Docker we have support for using a Docker image to build seL4 and CAmkES that is preconfigured with all the tools needed to download and build the code.  See [github.com/ikuz/docker-sel4-camkes](https://github.com/ikuz/docker-sel4-camkes).  
+
+Note, however, the Docker image is not set up to connect to the Odroid-XU (see [`HARDWARE.md`](https://github.com/smaccm/march-drop-manifest/blob/master/HARDWARE.md) for general details of how to do this).
 
 ## Toolchains
 
@@ -20,7 +22,7 @@ Building CAmkES reguires: an appropriate cross compiler, Python, Python packages
 
 ### Install git and repo
 
-    	sudo apt-get git phablet-tools; 
+    	sudo apt-get install git phablet-tools; 
 
 Tell git who you are (replace `<email>` with your own email address):
 
