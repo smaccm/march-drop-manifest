@@ -60,7 +60,7 @@
         <linkfile src="Kconfig" dest="Kconfig"/>
         <linkfile src="configs" dest="configs"/>
         <linkfile src="../../.repo/manifests/README.md" dest="README.md"/>
-        <linkfile src="../../.repo/manifests/PREREQS.md" dest="PREREQS.md"/>
+        <linkfile src="../../.repo/manifests/PREREQ.md" dest="PREREQ.md"/>
         <linkfile src="../../.repo/manifests/HARDWARE.md" dest="HARDWARE.md"/>
         <linkfile src="../../tools/camkes/docs/index.md" dest="README-CAmkES.md"/>
         <linkfile src="../../kernel/libsel4" dest="libs/libsel4"/>
