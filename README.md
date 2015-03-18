@@ -38,6 +38,14 @@ Build:
 
      make
 
+Note that the `repo sync` command will fetch the heads of the various repositories that the manifest uses.  Since these are actively being developed they will change as time goes on, and the behaviour of the project may change as a consequence. We keep manifest snapshots that fix the versions of repositories used.  If you want to use the last known working version you can use these instead as follows:
+
+	repo sync -m working.xml
+
+or for specific snapshots in the `snapshots` directory:
+
+	repo sync -m snapshots/<snapshotname>.xml
+
 ## Preparing Odroid-XU
 
 See [`HARDWARE.md`](https://github.com/smaccm/march-drop-manifest/blob/master/HARDWARE.md) for detailed instructions on how to prepare the Odroid-XU to run this code.
