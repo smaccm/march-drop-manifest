@@ -46,5 +46,5 @@
   </project>
   <project name="musllibc.git" path="libs/libmuslc" remote="seL4pub" revision="6aa6001a2413db18f056daa14801e64c0c089e6f" upstream="sel4"/>
   <project name="python-capdl-tool.git" path="tools/python-capdl" remote="seL4pub" revision="63685af417b626404934407166b6a15a966a5187" upstream="master"/>
-  <project name="seL4.git" path="kernel" revision="5398adc149304879a0ee5350450b0b6edb7d5f92" upstream="arm_hyp"/>
+  <project name="seL4.git" path="kernel" revision="7c754e68939366130a515ee8de4013bece38e17c" upstream="arm_hyp"/>
 </manifest>
